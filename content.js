@@ -1,7 +1,10 @@
-console.log("yes")
+let doc = document.getElementsByTagName('body');
 
-let paragraphs = document.getElementsByTagName('p')
+//console.log(doc);
 
-for (elt of paragraphs) {
-    console.log(elt)
+for (elt of doc) {
+    console.log(elt.innerText);
+    //console.log(elt.innerText);
 }
+
+//quickstart();
