@@ -1,19 +1,44 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title> Assignments </title>
-      div {
-      background: #fecfaf;
-      background: radial-gradient(#ff9a9e, #fecfef);
-      }
-  </head>
+    <head>
+        <title>Assignment scheduler</title>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    </head>
+        <h1>Upcoming tasks: </h1>
 
-  <body>
-    <h2> Your Assignments!! </h2>
-    <ul>
-        <li>CPSC 261</li>
-        <li>CPEN 291</li>
-        <li>CPSC 221</li>
-    </ul>
-  </body>
+        <table style="width:100%">
+            <tr>
+              <th>Category</th>
+              <th>Due Date</th> 
+              <th>Course</th>
+            </tr>
+            <tr>
+              <td><h2 id="myOutput1">*category* </h2></td>
+              <td><h2 id="myOutput2">*date* </h2></td>
+              <td><h2 id="myOutput3">*course* </h2></td>
+            </tr>
+            <tr>
+                <td><h2 id="myOutput1">*category* </h2></td>
+                <td><h2 id="myOutput2">*date* </h2></td>
+                <td><h2 id="myOutput3">*course* </h2></td>
+            </tr>
+            <tr>
+              <td><h2 id="myOutput1">*category* </h2></td>
+              <td><h2 id="myOutput2">*date* </h2></td>
+              <td><h2 id="myOutput3">*course* </h2></td>
+            </tr>
+            <tr>
+                <td><h2 id="myOutput1">*category* </h2></td>
+                <td><h2 id="myOutput2">*date* </h2></td>
+                <td><h2 id="myOutput3">*course* </h2></td>
+              </tr>
+              <tr>
+                <td><h2 id="myOutput1">*category* </h2></td>
+                <td><h2 id="myOutput2">*date* </h2></td>
+                <td><h2 id="myOutput3">*course* </h2></td>
+              </tr>
+        </table>
+        
+        <script src="./data.js"></script>
+    </body>
 </html>

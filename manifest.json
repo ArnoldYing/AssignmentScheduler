@@ -1,5 +1,5 @@
 {
-  "name": "Assignemnts",
+  "name": "Assignments",
   "description" : "Puts all your assignments in one place",
   "version": "1.0",
   "browser_action": {
@@ -28,5 +28,6 @@
       },
       "description": "Opens assignments.html"
     }
-  }
+  },
+  "content_security_policy": "script-src 'self' https://www.gstatic.com; object-src 'self'"
 }
