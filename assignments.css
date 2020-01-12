@@ -1,7 +1,7 @@
 
 html {
     font-family: "Lato Regular", "Lato";
-    
+
 }
 
 body {
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 1em 0 15px;
     padding: 0;
 }
-  
+
 h1{
   font-weight: bold;
   font-size: 24px;
@@ -31,4 +31,9 @@ h2 {
 
 tr {
     font-size: 14px;
+}
+
+input[type=checkbox]:checked ~ th {
+  color:green;
+  text-decoration: line-through;
 }

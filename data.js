@@ -32,23 +32,17 @@ function renderTask(doc) {
   date.textContent = doc.data().date.toDate().toDateString();
   course.textContent = doc.data().course;
 
-  let done = document.createElement('th');
   let input = document.createElement('input');
   let label = document.createElement('label');
   let span = document.createElement('span');
   label.for = "four";
   input.type = "checkbox";
-  input.id = "four";
-  
-  label.appendChild(span);
+  input.class = doc.id;
 
-  done.appendChild(label);
-  done.appendChild(input);
-
+  tr.appendChild(input);
   tr.appendChild(category);
   tr.appendChild(date);
   tr.appendChild(course);
-  tr.appendChild(done);
 
   taskList.appendChild(tr);
 }
@@ -56,9 +50,9 @@ function renderTask(doc) {
 //notification
 function notify() {
   var notif = {
-    type: 'basic', 
-    iconUrl: 'reminder.png', 
-    title: 'assignment due soon!', 
+    type: 'basic',
+    iconUrl: 'reminder.png',
+    title: 'assignment due soon!',
     message: 'You have an upcoming assignment/ test.'
   }
   chrome.notifications.create('reminder', notif);
