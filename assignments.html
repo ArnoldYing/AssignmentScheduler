@@ -1,44 +1,83 @@
 <html>
-    <head>
-        <title>Assignment scheduler</title>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>  
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
-    </head>
-        <h1>Upcoming tasks: </h1>
+<head>
+    <title>Assignment scheduler</title>
+    <style>
+        body {
+        background: #fecfaf;
+        background: radial-gradient(#ff9a9e, #fecfef);
+        }
+        </style>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+</head>
+<body>
+<section>
+    <h1>Upcoming tasks: </h1>
 
-        <table style="width:100%">
-            <tr>
-              <th>Category</th>
-              <th>Due Date</th> 
-              <th>Course</th>
-            </tr>
-            <tr>
-              <td><h2 id="myOutput1">*category* </h2></td>
-              <td><h2 id="myOutput2">*date* </h2></td>
-              <td><h2 id="myOutput3">*course* </h2></td>
-            </tr>
-            <tr>
-                <td><h2 id="myOutput1">*category* </h2></td>
-                <td><h2 id="myOutput2">*date* </h2></td>
-                <td><h2 id="myOutput3">*course* </h2></td>
-            </tr>
-            <tr>
-              <td><h2 id="myOutput1">*category* </h2></td>
-              <td><h2 id="myOutput2">*date* </h2></td>
-              <td><h2 id="myOutput3">*course* </h2></td>
-            </tr>
-            <tr>
-                <td><h2 id="myOutput1">*category* </h2></td>
-                <td><h2 id="myOutput2">*date* </h2></td>
-                <td><h2 id="myOutput3">*course* </h2></td>
-              </tr>
-              <tr>
-                <td><h2 id="myOutput1">*category* </h2></td>
-                <td><h2 id="myOutput2">*date* </h2></td>
-                <td><h2 id="myOutput3">*course* </h2></td>
-              </tr>
-        </table>
-        
-        <script src="./data.js"></script>
-    </body>
+    <table style="width:100%">
+        <tr>
+            <th>Category</th>
+            <th>Due Date</th>
+            <th>Course</th>
+            <th>Done?</th>
+        </tr>
+        <tr>
+            <td><h2 id="myOutput1">*category* </h2></td>
+            <td><h2 id="myOutput2">*date* </h2></td>
+            <td><h2 id="myOutput3">*course* </h2></td>
+            <td> <input id='one' type='checkbox' />
+                <label for='one'>
+                    <span></span>
+                    Off with your head
+                    <ins><i>Off with your head</i></ins>
+                </label></td>
+        </tr>
+        <tr>
+            <td><h2 id="myOutput1">*category* </h2></td>
+            <td><h2 id="myOutput2">*date* </h2></td>
+            <td><h2 id="myOutput3">*course* </h2></td>
+            <td> <input id='two' type='checkbox' />
+                <label for='two'>
+                    <span></span>
+                    Done?
+                    <ins><i>Done!</i></ins>
+                </label></td>
+        </tr>
+        <tr>
+            <td><h2 id="myOutput1">*category* </h2></td>
+            <td><h2 id="myOutput2">*date* </h2></td>
+            <td><h2 id="myOutput3">*course* </h2></td>
+            <td> <input id='three' type='checkbox' />
+                <label for='three'>
+                    <span></span>
+                    Off with your head
+                    <ins><i>Off with your head</i></ins>
+                </label></td>
+        </tr>
+        <tr>
+            <td><h2 id="myOutput1">*category* </h2></td>
+            <td><h2 id="myOutput2">*date* </h2></td>
+            <td><h2 id="myOutput3">*course* </h2></td>
+            <td> <input id='five' type='checkbox' />
+                <label for='five'>
+                    <span></span>
+                    <ins><i>You're done! Yaaaay!</i></ins>
+                </label></td>
+        </tr>
+        <tr>
+            <td><h2 id="myOutput1">*category* </h2></td>
+            <td><h2 id="myOutput2">*date* </h2></td>
+            <td><h2 id="myOutput3">*course* </h2></td>
+            <td> <input id='four' type='checkbox' />
+                <label for='four'>
+                    <span></span>
+                    Off with your head
+                    <ins><i>Off with your head</i></ins>
+                </label></td>
+        </tr>
+    </table>
+
+    <script src="./data.js"></script>
+</section>
+</body>
 </html>
