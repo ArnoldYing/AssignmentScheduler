@@ -2,7 +2,7 @@
 html, body{ margin: 0; height: 100%; }
 body{
   display: flex;
-  background: #212121;
+  background: radial-gradient(black 5%, #8c8c8c );
   justify-content: center;
   align-items: center;
   font: 24px/1.4 "RobotoDraft", sans-serif;
