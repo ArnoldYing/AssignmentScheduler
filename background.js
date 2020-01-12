@@ -16,16 +16,42 @@ firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
 
 
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+
+    console.log(request);
+
+    firestore.collection("Upcoming tasks").add({
+      category: "Test",
+      course: sender.tab.url,
+      date: new Date()
+  })
+})
+
+
+
+const form = document.querySelector('add-task-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  firestore.collection("Upcoming tasks").add({
+    category: form.category.value,
+    course: form.course.value,
+    date: new Date()
+})
+})
+
   // receive message from content.js then send it to database
 
-  chrome.runtime.onMessage.addListener(
+  /*chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
 
       console.log(request);
 
       firestore.collection("Upcoming tasks").add({
         category: "Test",
-        course: "aiyah",
-        date: new Date().toDateString()
+        course: sender.tab.url,
+        date: new Date()
     })
-  })
+  }) */
