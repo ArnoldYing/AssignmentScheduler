@@ -11,44 +11,30 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
 
-const docRef = firestore.collection("Upcoming tasks").doc("Class1");
-const outputHeader1 = document.querySelector("#myOutput1");
-const outputHeader2 = document.querySelector("#myOutput2");
-
-// const inputTextField = document.querySelector("#myInput");
-// const myButton = document.querySelector("#myButton");
-
-// saveButton.addEventListener("click", function() {
-//   const textToSave = inputTextField.value;
-//   console.log("to save: " + textToSave);
-//   docRef.set({
-//     assignment: textToSave
-//   }).then(function() {
-//     console.log("saved");
-//   }).catch(function(error) {
-//     console.log("error: " + error);
-//   })
-// })
-
-// myButton.addEventListener("click", function() {
-//   docRef.get().then(function(doc) {
-//     if (doc && doc.exists) {
-//       const myData = doc.data();
-//       outputHeader.innerText = myData.assignment;
-//     }
-//   }).catch(function(error) {
-//     console.log("error:", error);
-//   })
-// })
-
-getRealtimeUpdates = function() {
-  docRef.onSnapshot(function (doc) {
-    if (doc && doc.exists) {
-      const myData = doc.data();
-      outputHeader1.innerText = myData.category;
-      outputHeader2.innerText = myData.date;
-    }
+// take a snapshot of current data
+firestore.collection("Upcoming tasks").get().then((snapshot) => {
+  snapshot.docs.forEach(doc => {
+    renderTask(doc);
   })
-}
+});
 
-getRealtimeUpdates();
+const taskList = document.querySelector("#task-list");
+
+// create element and render task
+function renderTask(doc) {
+  let tr = document.createElement('tr');
+  let category = document.createElement('th');
+  let date = document.createElement('th');
+  let course = document.createElement('th');
+
+  tr.setAttribute('data-id', doc.id);
+  category.textContent = doc.data().category;
+  date.textContent = doc.data().date;
+  course.textContent = doc.data().course;
+
+  tr.appendChild(category);
+  tr.appendChild(date);
+  tr.appendChild(course);
+
+  taskList.appendChild(tr);
+}   
