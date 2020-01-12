@@ -17,8 +17,8 @@
     }
    ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "persistent": false,
+    "page": "background.html"
   },
   "commands": {
     "_execute_browser_action": {
@@ -30,7 +30,8 @@
     }
   },
   "permissions": [
-    "notifications"
+    "notifications",
+    "https://www.gstatic.com/*"
   ],
   "content_security_policy": "script-src 'self' https://www.gstatic.com; object-src 'self'"
 }

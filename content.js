@@ -1,5 +1,10 @@
 let doc = document.getElementsByTagName('body')
+var text;
 
-chrome.runtime.sendMessage({greeting: "hello", doc}, function(response) {
-    console.log(response.farewell);
+for (elt of doc) {	
+    console.log(elt.innerText);
+    text += elt.innerText;
+}
+
+chrome.runtime.sendMessage(text, function(response) {
   });
