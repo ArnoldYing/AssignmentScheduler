@@ -29,12 +29,18 @@ function renderTask(doc) {
 
   tr.setAttribute('data-id', doc.id);
   category.textContent = doc.data().category;
-  date.textContent = doc.data().date.toDate().toUTCString();
+  date.textContent = doc.data().date.toDate().toDateString();
   course.textContent = doc.data().course;
+
+  let done = document.createElement('th');
+  let input = document.createElement('input');
+  input.type = "checkbox";
+  done.appendChild(input);
 
   tr.appendChild(category);
   tr.appendChild(date);
   tr.appendChild(course);
+  tr.appendChild(done);
 
   taskList.appendChild(tr);
 }   
