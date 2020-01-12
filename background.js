@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener(
 
 
 
-const form = document.querySelector('add-task-form');
+/*const form = document.querySelector('add-task-form');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -40,11 +40,11 @@ form.addEventListener('submit', (e) => {
     course: form.course.value,
     date: new Date()
 })
-})
+})*/
 
   // receive message from content.js then send it to database
 
-  /*chrome.runtime.onMessage.addListener(
+  chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
 
       console.log(request);
@@ -54,4 +54,4 @@ form.addEventListener('submit', (e) => {
         course: sender.tab.url,
         date: new Date()
     })
-  }) */
+  })

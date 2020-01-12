@@ -60,7 +60,7 @@ function notify(dueDate) {
   const remindDay = new Date();
   remindDay.setDate(remindDay.getDate + 2);
   
-  if (dates.compare(dueDate, remindDay) < 0) {
+  if (dueDate <= remindDay) {
     chrome.notifications.create('reminder', notif);
   }
 }
