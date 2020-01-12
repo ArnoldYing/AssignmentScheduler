@@ -7,7 +7,7 @@ body{
   align-items: center;
   font: 24px/1.4 "RobotoDraft", sans-serif;
   color: #fff;
-  table, th, td {
+  table: th, td {
   border: 1px solid white;
 }
 }
@@ -24,8 +24,6 @@ h1{
   cursor: default;
   margin: 0 0 .1em 0;
 }
-
-input[type='checkbox']{ height: 0; width: 0; }
 
 input[type='checkbox'] + label{
   position: relative;
