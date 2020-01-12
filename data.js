@@ -34,7 +34,15 @@ function renderTask(doc) {
 
   let done = document.createElement('th');
   let input = document.createElement('input');
+  let label = document.createElement('label');
+  let span = document.createElement('span');
+  label.for = "four";
   input.type = "checkbox";
+  input.id = "four";
+  
+  label.appendChild(span);
+
+  done.appendChild(label);
   done.appendChild(input);
 
   tr.appendChild(category);

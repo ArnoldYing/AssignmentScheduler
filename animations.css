@@ -2,12 +2,12 @@
 html, body{ margin: 0; height: 100%; }
 body{
   display: flex;
-  background: radial-gradient(#f56969 5%, #fcd4d4);
+  background: radial-gradient(#4719ff 5%, #876afc);
   justify-content: center;
   align-items: center;
   font: 24px/1.4 "RobotoDraft", sans-serif;
   color: #fff;
-  table, th, td {
+  table: th, td {
   border: 1px solid white;
 }
 }
@@ -24,8 +24,6 @@ h1{
   cursor: default;
   margin: 0 0 .1em 0;
 }
-
-input[type='checkbox']{ height: 0; width: 0; }
 
 input[type='checkbox'] + label{
   position: relative;

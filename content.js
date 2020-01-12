@@ -1,4 +1,5 @@
-let doc = document.getElementsByTagName('body');
+let doc = document.getElementsByTagName('body')
 
-// sends message to background.js
-  
+chrome.runtime.sendMessage({greeting: "hello", doc}, function(response) {
+    console.log(response.farewell);
+  });
