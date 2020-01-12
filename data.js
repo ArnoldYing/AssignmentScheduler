@@ -29,7 +29,7 @@ function renderTask(doc) {
 
   tr.setAttribute('data-id', doc.id);
   category.textContent = doc.data().category;
-  date.textContent = doc.data().date.toDate().toDateString();
+  date.textContent = doc.data().date;
   course.textContent = doc.data().course;
 
   let done = document.createElement('th');
