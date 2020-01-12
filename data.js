@@ -29,7 +29,9 @@ function renderTask(doc) {
 
   tr.setAttribute('data-id', doc.id);
   category.textContent = doc.data().category;
-  date.textContent = doc.data().date.toDate().toDateString();
+  var dueDate = doc.data().date.toDate();
+  notify(dueDate);
+  date.textContent = dueDate.toDateString();
   course.textContent = doc.data().course;
 
   let done = document.createElement('th');
@@ -54,14 +56,19 @@ function renderTask(doc) {
 }
 
 //notification
-function notify() {
+function notify(dueDate) {
   var notif = {
     type: 'basic', 
     iconUrl: 'reminder.png', 
     title: 'assignment due soon!', 
     message: 'You have an upcoming assignment/ test.'
   }
-  chrome.notifications.create('reminder', notif);
+  const remindDay = new Date();
+  remindDay.setDate(remindDay.getDate + 2);
+  
+  if (dates.compare(dueDate, remindDay) < 0) {
+    chrome.notifications.create('reminder', notif);
+  }
 }
 
-notify();
+// notify();
