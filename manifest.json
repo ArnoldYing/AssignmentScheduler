@@ -29,5 +29,8 @@
       "description": "Opens assignments.html"
     }
   },
+  "permissions": [
+    "notifications"
+  ],
   "content_security_policy": "script-src 'self' https://www.gstatic.com; object-src 'self'"
 }

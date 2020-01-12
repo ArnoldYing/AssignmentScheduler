@@ -43,4 +43,17 @@ function renderTask(doc) {
   tr.appendChild(done);
 
   taskList.appendChild(tr);
-}   
+}
+
+//notification
+function notify() {
+  var notif = {
+    type: 'basic', 
+    iconUrl: 'reminder.png', 
+    title: 'assignment due soon!', 
+    message: 'You have an upcoming assignment/ test.'
+  }
+  chrome.notifications.create('reminder', notif);
+}
+
+notify();

@@ -1,16 +1,19 @@
 
 html {
     font-family: "Lato Regular", "Lato";
+    
 }
 
 body {
-    background: #fecfaf;
-    background: radial-gradient(#ff9a9e, #fecfef);
+    background: #CDCDCD;
+    background: radial-gradient(#3a3f42, #18191b);
     width: 350px;
+    color: #eeeeee;
+    padding-bottom: 25px;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
     line-height: 1.5;
     margin: 1em 0 15px;
     padding: 0;
@@ -19,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 h1{
   font-weight: bold;
   font-size: 24px;
+  text-decoration: underline;
 }
 
 h2 {
